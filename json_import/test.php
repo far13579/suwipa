@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <button onclick="load_Data()">Load Data</button>
+    <button onclick="load_data()">Load Data</button>
     year:<br>
     <select id="sel_year"></select><br>
     movie title:<br>

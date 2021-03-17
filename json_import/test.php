@@ -9,7 +9,6 @@
 </head>
 
 <body>
-   
     <button onclick="load_Data()">Load Data</button>
     year:<br>
     <select id="sel_year"></select><br>
@@ -27,25 +26,11 @@
             }
             alert("Total Year "+movie_year.size);
             const ref_year = movie_year.values();
-            for ( y = 0; y < movie_year.size; y++) {
+            for ( y = 0; y<movie_year.size;y++) {
                 var option = document.createElement("option");
                 option.text = ref_year.next().value;
-                doc.add(option);
-                // const element = array[y];
-                
+                doc.add(option);  
             }
-            
-
-            // doc = document.getElementById("Movie_Title")
-            // var option = document.createElement("option");
-            // option.text = "N/A"
-            // doc.add(option);
-            // alert(jSonEX.length);
-            // for (i=0;i<jSonEX.length;i++ ){
-            //     var option = document.createElement("option");
-            //     option.text = jSonEX[i].title;
-            //     doc.add(option);
-            
             return jSonEX;
         }
     </script>

@@ -11,7 +11,7 @@
 <body>
     <button onclick="load_data()">Load Data</button>
     year:<br>
-    <select id="sel_year" onchange="load_title">
+    <select id="sel_year" onchange="load_title()">
         <option value="">N/A</option>
     </select><br>
     movie title:<br>
@@ -40,7 +40,6 @@
         function load_title() {
             var doc = document.getElementById("Movie_Title");
             var y = document.getElementById("sel_year");
-            alert(y.value);
             doc.innerHTML = "";
             for (i = 0; i < jSonEX.length; i++) {
                 if (jSonEX[i].year == y.value) {

@@ -38,16 +38,14 @@
         }
 
         function load_title() {
-            alert("Year Change");
-            // alert("Total Year "+movie_year.size);
             var doc = document.getElementById("Movie_Title");
-            var doc = document.getElementById("sel_year");
+            var y = document.getElementById("sel_year");
             alert(y.value);
-            y.innerHTML = "";
+            doc.innerHTML = "";
             for (i = 0; i < jSonEX.length; i++) {
                 if (jSonEX[i].year == y.value) {
                     var option = document.createElement("option");
-                    option.text = ref_year.next().value;
+                    option.text = jSonEX[i].title;
                     doc.add(option);
                 }
 

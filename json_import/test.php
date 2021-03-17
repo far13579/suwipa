@@ -50,6 +50,15 @@
 
             }
         }
+        function load_moie_connect(){
+            var doc = document.getElementById("out");
+            var txt = document.createElementById("input");
+            txt.value = "Movie Title";
+            doc.appendchild(txt);
+            var txt = document.createElementById("TextArea");
+            txt.value = "Movie Title";
+            doc.appendchild(txt);
+        }
     </script>
 </body>
 

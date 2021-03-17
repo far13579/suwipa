@@ -15,7 +15,7 @@
         <option value="">N/A</option>
     </select><br>
     movie title:<br>
-    <select id="Movie_Title">
+    <select id="Movie_Title" onchange="load_moie_connect()">
         <option value="">N/A</option>
     </select><br>
     <div id="out"></div>

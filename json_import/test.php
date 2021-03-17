@@ -52,12 +52,12 @@
         }
         function load_movie_content(){
             var doc = document.getElementById("out");
-            var txt = document.createElementById("input");
+            var txt = document.createElement("input");
             txt.value = "Movie Title";
-            doc.appendchild(txt);
-            var txt = document.createElementById("TextArea");
+            doc.appendChild(txt);
+            var txt = document.createElement("TextArea");
             txt.value = "Movie Title";
-            doc.appendchild(txt);
+            doc.appendChild(txt);
         }
     </script>
 </body>

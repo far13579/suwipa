@@ -15,7 +15,7 @@
         <option value="">N/A</option>
     </select><br>
     movie title:<br>
-    <select id="Movie_Title" onchange="load_moive_connect()" >
+    <select id="Movie_Title" onchange="load_movie_content()" >
         <option value="">N/A</option>
     </select><br>
     <div id="out"></div>
@@ -50,7 +50,7 @@
 
             }
         }
-        function load_moive_connect(){
+        function load_movie_content(){
             var doc = document.getElementById("out");
             var txt = document.createElementById("input");
             txt.value = "Movie Title";

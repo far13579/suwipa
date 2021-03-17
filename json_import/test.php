@@ -11,7 +11,7 @@
 <body>
     <button onclick="load_data()">Load Data</button>
     year:<br>
-    <select id="sel_year"></select><br>
+    <select id="sel_year" onchange="load_title"></select><br>
     movie title:<br>
     <select id="Movie_Title"></select><br>
     <div id="out"></div>
@@ -32,6 +32,9 @@
                 doc.add(option);  
             }
             return jSonEX;
+        }
+        function load_title(){
+            alert("YEAR Change");
         }
     </script>
 </body>

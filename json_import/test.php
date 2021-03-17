@@ -11,9 +11,13 @@
 <body>
     <button onclick="load_data()">Load Data</button>
     year:<br>
-    <select id="sel_year" onchange="load_title"></select><br>
+    <select id="sel_year" onchange="load_title">
+        <option value="">N/A</option>
+    </select><br>
     movie title:<br>
-    <select id="Movie_Title"></select><br>
+    <select id="Movie_Title">
+        <option value="">N/A</option>
+    </select><br>
     <div id="out"></div>
     <script>
         let jSonEX;
@@ -21,30 +25,33 @@
             jSonEX = <?= file_get_contents("movies.json") ?>;
             var movie_year = new Set();
             var doc = document.getElementById("sel_year");
-            for(i=0;i<jSonEX.length; i++){
+            for (i = 0; i < jSonEX.length; i++) {
                 movie_year.add(jSonEX[i].year);
             }
-            alert("Total Year "+movie_year.size);
             const ref_year = movie_year.values();
-            for ( y = 0; y<movie_year.size;y++) {
+            for (y = 0; y < movie_year.size; y++) {
                 var option = document.createElement("option");
                 option.text = ref_year.next().value;
-                doc.add(option);  
+                doc.add(option);
             }
             return jSonEX;
         }
-        function load_title(){
+
+        function load_title() {
             alert("Year Change");
             // alert("Total Year "+movie_year.size);
             var doc = document.getElementById("Movie_Title");
             var doc = document.getElementById("sel_year");
             alert(y.value);
-            // const ref_year = movie_year.values();
-            // for ( y = 0; y<movie_year.size;y++) {
-            //     var option = document.createElement("option");
-            //     option.text = ref_year.next().value;
-            //     doc.add(option);  
-            // }
+            y.innerHTML = "";
+            for (i = 0; i < jSonEX.length; i++) {
+                if (jSonEX[i].year == y.value) {
+                    var option = document.createElement("option");
+                    option.text = ref_year.next().value;
+                    doc.add(option);
+                }
+
+            }
         }
     </script>
 </body>

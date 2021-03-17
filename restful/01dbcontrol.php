@@ -32,5 +32,4 @@ class db {
     function close(){ $this->db->close(); }
 }
 ?>
-<!-- $mydb = new db("root", "", "test", true);
-$mydb->query("select * from test"); -->
+

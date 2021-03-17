@@ -14,15 +14,15 @@
         function loadContent() {
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
-                console.log(this.readyState + "" + this.status);
-                if (this.readyState == 4 && this.status == 200) {
+                console.log(this.readyState + ", " + this.status);
+                if (this.readyState==4 && this.status==200) {
                     console.log(this.responseText);
                     data = JSON.parse(this.responseText);
-                    out = document.getElementbyId("out");
-                    console.log (data.length);
-                    for (let i = 0; i < data.length; i++) {
+                    out = document.getElementById("out");
+                    console.log(data.length);
+                    for (i=0;i<data.length;i++) {
                         for(inf in data[i]){
-                             text += data[i][inf]+" ";
+                             text += "<td>"+data[i][inf]+"</td>";
                         }
                        text+="\n";
                     }

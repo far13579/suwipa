@@ -18,13 +18,11 @@
     }else{
         http_response_code(405);
     }
-
     function show_data($debug_mode){
         $mydb = new db("root","","sec2",$debug_mode);
         $data = $mydb->query("select * from user");
         return $data;
         // $mydb->close();
-        
     }
     function insert_newdata($u_id,$u_name,$debug_mode){
         $mydb = new db("root","","sec2",$debug_mode);
